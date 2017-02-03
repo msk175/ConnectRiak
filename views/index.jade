@@ -1,0 +1,63 @@
+!!! 5
+html
+    head
+        title= title
+        script(type='text/javascript', src='/JavaScript/sample.js')
+block content
+    h1  Welcome to Node JS Application.
+
+    form#user_registration_form(action='/storeValue',enctype="multipart/form-data",data-ajax="false",id='BDEFormID',name = 'user_reigstration_form',method='post')
+        header(style='padding-left:8px;')
+            h3 
+        br
+        table.user_table
+            tr
+                td(width="40%", align="right")
+                    h2 #{msg}
+            tr
+                td(colspan = '2')
+                    span(style='font-weight:bold;') Register Information:
+                    hr
+            tr
+                td(width="40%", align="right")
+                    label Key Value
+                td(width="30%", align="left")
+                    input(type="text", id="acc_number", name="acc_number")
+                tr
+                    td(width="40%", align="right")
+                        label Customer ID
+                    td(width="30%", align="left")
+                        input(type="text", id="customer_id", name="customer_id")
+                tr
+                    td(width="40%", align="right")
+                        label Name
+                    td(width="30%", align="left")
+                        input(type="text", id="name", name="name")
+
+                tr
+                    td(width="40%", align="center")
+                        
+                    td(width="30%", align="left")
+                        input(type="submit", id="save", value='Submit', onclick="return checkStoreValue();").button_as_text
+
+        br
+        table.user_table
+            tr
+                td(width="40%", align="right")
+                    h2 
+            tr
+                td(colspan = '2')
+                    span(style='font-weight:bold;') Registered Information:
+                    hr
+            tr
+                td(width="40%", align="right")
+                    label Key Value
+                td(width="30%", align="left")
+                    input(type="text", id="acc_numbers", name="acc_numbers")
+            
+
+                tr
+                    td(width="40%", align="center")
+                       
+                    td(width="30%", align="left")
+                        input(type="submit", id="save", value='Submit',onclick="return checkFetchValue();").button_as_text
