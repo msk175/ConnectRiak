@@ -1,3 +1,0 @@
-applications:
-- name: express_example
-  command: node app.js
